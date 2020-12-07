@@ -53,8 +53,8 @@ class ListPlacesWorker: ListPlacesWorkerProtocol {
         }
     }
     private func getPlaceByType(_ type: String,completion: @escaping(Result<[Place],ServiceError>)->()){
-        let lat = location.getLat() ?? "-23.557622"
-        let lng = location.getLng() ?? "-46.689612"
+        let lat = location.getLat() ?? ""
+        let lng = location.getLng() ?? ""
         let radius = "1500"
         let request = PlaceRequest(type: type, lat: lat, lng: lng, radius: radius)
         googleService.nearbysearch(request) { (result:PlaceResponse?, error:ServiceError?) in
