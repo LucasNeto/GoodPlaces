@@ -19,7 +19,7 @@ protocol DetailPlaceDisplayLogic: BaseViewControllerProtocol {
 class DetailPlaceViewController: UIViewController, DetailPlaceDisplayLogic {
     
     var interactor: DetailPlaceBusinessLogic?
-    var router: (NSObjectProtocol & DetailPlaceRoutingLogic & DetailPlaceDataPassing)?
+    var router: (NSObjectProtocol & DetailPlaceDataPassing)?
     
     //MARK: OBOutlets
     @IBOutlet weak var iconImg: UIImageView!
